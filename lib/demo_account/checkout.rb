@@ -58,8 +58,8 @@ module DemoAccount
                icon_name:"couple"},
               {name:"友達",
                icon_name:"friends"},]
-        tag_contents = {customer_tags:tags}
-        @response = @client._post("accounts/#{@account_id}/customer_tags",tag_contents)
+        query = {customer_tags:tags}
+        @response = @client._post("accounts/#{@account_id}/customer_tags",query)
       end
 
       def create_item_json(items, item_id, count=1)

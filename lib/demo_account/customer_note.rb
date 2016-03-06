@@ -10,7 +10,6 @@ module DemoAccount
 
       contents = []
 
-      checkouts = checkouts["checkouts"]
       checkouts.size.times do |m|
         checkout_id = checkouts[m]["id"]
         contents << note(checkout_id)
