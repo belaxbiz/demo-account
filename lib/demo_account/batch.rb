@@ -20,7 +20,7 @@ class Batch
     checkout_client = Checkout.new(client, account)
 
     365.times {
-      checkouts_response = checkout_client.create_daily_checkouts(date, rand(20)+10, rand(5)+1)
+      checkouts_response = checkout_client.create_daily_checkouts(date, rand(20)+10, 5)
       chcekcouts = checkouts_response["checkouts"]
       CustomerNote.create_customer_notes(client, customers, checkouts)
       date += 1

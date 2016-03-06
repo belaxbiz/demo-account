@@ -23,8 +23,8 @@ module DemoAccount
                  item_jsons = []
                  amount = 0
 
-                 item_num.times {
-                   item_jsons << create_item_json(@menu_items, rand(10), rand(5)+1)
+                 (rand(item_num)+1).times {
+                   item_jsons << create_item_json(@menu_items, rand(30), rand(5)+1)
                    amount += @total
                  }
 
